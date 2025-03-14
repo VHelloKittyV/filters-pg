@@ -88,7 +88,7 @@ const ListTask = ({ tasks, onDelete, onComplete }) => {
   return (
     <ul className="list">
       {tasks.map((task) => (
-        <li key={task.id} className="flex justify-between items-center p-2 border-b">
+        <li key={task.id} className="flex justify-between items-center p-2  list-row">
           <span className={`${task.isCompleted ? "line-through text-gray-400" : ""}`}>
             {task.name}
           </span>
