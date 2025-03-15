@@ -9,7 +9,21 @@
   font-weight: 400;
 
 }
+@layer base {
+  h1, h2 {
+    @apply text-2xl font-bold;
+  }
+}
 .icon{
   @apply cursor-pointer;
 }
 
+.wrapper{
+  @apply grid place-self-center p-4 gap-4;
+}
+.row{
+  @apply flex gap-2 justify-between items-center;
+}
+.col{
+  @apply flex flex-col gap-2;
+}
