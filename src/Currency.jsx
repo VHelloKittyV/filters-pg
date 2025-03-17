@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-//render prop components
+//render prop components.
 export default function Currency() {
 
   return (

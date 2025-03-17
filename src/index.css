@@ -13,6 +13,12 @@
   h1, h2 {
     @apply text-2xl font-bold;
   }
+  button{
+    @apply btn
+  }
+  input{
+    @apply input
+  }
 }
 .icon{
   @apply cursor-pointer;

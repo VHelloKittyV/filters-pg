@@ -1,15 +1,14 @@
-import React, { useState } from "react";
-import List from "./List";
-import Currency from "./Currency";
+import React from 'react'
+import UseReducerList from './useReducerList'
+import List from './List'
+import Currency from './Currency'
 
 export default function App() {
-  
-  return(
-    <div className="wrapper">
-    < Currency/>
-    <List/>
+  return (
+    <div className='wrapper'>
+      <UseReducerList/>
+      <List/>
+      <Currency/>
     </div>
- 
   )
-
-};
+}
