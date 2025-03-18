@@ -43,7 +43,7 @@ export default function Counter() {
 
   return (
     <div>
-      <h1 className="text-center">{state.count}</h1>
+      <h1>{state.count}</h1>
       <p className="text-red-500">{state.error}</p>
       <div className="flex gap-2">
         <button onClick={handleIcrease}>+</button>

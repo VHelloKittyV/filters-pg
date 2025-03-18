@@ -42,8 +42,8 @@ export default function UseReducerList() {
     }
   };
   return (
-    <div className="wrapper">
-      <h1 className="text-center">useReduce List</h1>
+    <>
+      <h1>useReduce List</h1>
       <form onSubmit={handleSubmit} className="row">
         <input
           value={name}
@@ -55,31 +55,33 @@ export default function UseReducerList() {
 
       <ul className="list">
         {todos.map((todo) => (
-          <li className="row" key={todo.id}>
+          <li className="list-row row" key={todo.id}>
             {todo.name}
-            <span>
-              <button
-                onClick={() =>
-                  dispatch({
-                    type: ACTION.TOGGLE_TODO,
-                    payload: { id: todo.id },
-                  })
-                }
-              >
-                {todo.isCompleted ? "undone" : "done"}
-              </button>
-            </span>
-            <span>
-              <button onClick={() =>
-                  dispatch({
-                    type: ACTION.DELETE_TODO,
-                    payload: { id: todo.id },
-                  })
-                }>delete</button>
-            </span>
+            <div className="row">
+              <span>
+                <button
+                  onClick={() =>
+                    dispatch({
+                      type: ACTION.TOGGLE_TODO,
+                      payload: { id: todo.id },
+                    })
+                  }
+                >
+                  {todo.isCompleted ? "undone" : "done"}
+                </button>
+              </span>
+              <span>
+                <button onClick={() =>
+                    dispatch({
+                      type: ACTION.DELETE_TODO,
+                      payload: { id: todo.id },
+                    })
+                  }>delete</button>
+              </span>
+            </div>
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
